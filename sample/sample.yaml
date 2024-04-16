@@ -1,0 +1,44 @@
+# キャラクター定義部
+characters:
+  - name: ずんだもん
+    # キャラクター画像定義
+    images:
+      normal: https://pbs.twimg.com/profile_images/1711709942070349824/fzLdDDDy_400x400.jpg
+    # キャラクター音声定義
+    voices:
+      normal:
+        voicevox_id: 3 # ノーマル
+      happy:
+        voicevox_id: 36 # ヒソヒソ
+
+  - name: めたん
+    images:
+      normal: https://pbs.twimg.com/profile_images/1150362260340035585/4L6zmO3e_400x400.jpg
+    voices:
+      normal:
+        voicevox_id: 2 # ノーマル
+      angry:
+        voicevox_id: 6 # あまあま
+
+# シーン定義部
+scenes:
+  - scene_id: 1
+    background_image: http://via.placeholder.com/1920x1080
+    # セリフ
+    dialogues:
+      - character: ずんだもん
+        content:
+          <p>吾輩は猫である</p>
+          <p>名前はまだ無い</p>
+        expression: normal
+        voice: normal
+        text: "僕、ずんだもんなのだ！"
+      - character: めたん
+        expression: normal
+        voice: angry
+        text: "うるさいわよ！ずんだもん！"
+      - character: ずんだもん
+        content: ""
+        expression: normal
+        voice: happy
+        text: "めたんの方がうるさいのだ！"
