@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>サンプルテンプレート</title>
+    <style>
+        /* 背景画像の設定 */
+        body, html {
+            height: 100%; /* フルハイト設定 */
+            margin: 0; /* マージンリセット */
+            font-family: 'Arial', sans-serif; /* フォント設定 */
+            background-image: url('$background_image');
+            background-size: cover; /* 背景画像を画面いっぱいに表示 */
+            display: flex;
+            flex-direction: column; /* コンテンツを縦方向に配置 */
+        }
+        /* メインコンテンツエリアのスタイリング */
+        .main-content {
+            flex: 1; /* 残りのスペースをすべて使用 */
+            padding: 20px;
+            overflow: auto; /* コンテンツが多い場合はスクロール */
+        }
+        .main-content img {
+            border: 1px solid;
+        }
+        /* セリフボックスのスタイリング */
+        .dialogue-box {
+            position: fixed; /* 固定位置 */
+            bottom: 0; /* 下部に配置 */
+            left: 0; /* 左端からスタート */
+            right: 0; /* 右端まで広がる */
+            display: flex; /* フレックスボックス */
+            align-items: center; /* アイテムを中央揃え */
+            justify-content: space-between; /* 内容物の間隔を左右に分ける */
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* 半透明の白背景 */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 影をつける */
+            margin: 10px;
+            border-radius: 20px;
+        }
+        .character{
+            max-width: 30%;
+        }
+        .right{
+            position: fixed;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+        }
+        .left{
+            position: fixed;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+        .speaker {
+            font-weight: bold; /* 話者名を太字に */
+            color: #333; /* 文字色 */
+            margin: 0px;
+            font-size: 30px;
+        }
+        .speech {
+            color: #555; /* 文字色 */
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-content">$content</div>
+    <img class="character right" src="$character_image" alt="キャラクター画像">
+    <div class="dialogue-box">
+        <div>
+            <p class="speaker">$character</p>
+            <p class="speech">$text</p>
+        </div>
+    </div>
+</body>
+</html>
